@@ -1,196 +1,143 @@
 ---
 marp: true
 theme: default
-paginate: false
 size: 16:9
+paginate: true
 style: |
-  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
   section {
-    background: #70020f;
-    color: #ffe0e3;
-    font-family: 'Arial', 'Helvetica', sans-serif;
-    font-size: 26px;
-    padding: 50px 60px;
-    text-transform: uppercase;
-    justify-content: flex-start;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #202938;
+    padding: 48px 64px;
+    font-size: 25px;
   }
   h1, h2 {
-    font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
-    font-weight: 400;
-    color: #ffe0e3;
-    line-height: 0.95;
-    letter-spacing: -1px;
-    margin: 0 0 30px 0;
+    color: #1769aa;
   }
-  h1 { font-size: 110px; }
-  h2 { font-size: 84px; }
-  h3 {
-    font-size: 28px;
-    margin: 0;
-    color: #e6d9dc;
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.65em;
   }
-  p { margin: 0 0 6px 0; }
-
-  /* Light variant (pink background, dark red text) */
-  section.light { background: #ffdde0; color: #70020f; }
-  section.light h1, section.light h2 { color: #70020f; }
-  section.light p, section.light li {
-    font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
-    font-size: 30px;
-    line-height: 1.35;
-    color: #111;
+  h2 {
+    font-size: 1.25em;
   }
-
-  /* Title slide */
-  section.title { justify-content: space-between; }
-  section.title h1 { font-size: 150px; margin-top: 0; }
-  section.title::before {
-    content: "DEVEL\A OPER";
-    white-space: pre;
-    position: absolute;
-    right: -60px;
-    top: 230px;
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 300px;
-    line-height: 0.95;
-    color: #5f0010;
-    z-index: 0;
+  strong {
+    color: #1769aa;
   }
-  section.title h1, section.title .by { position: relative; z-index: 1; }
-  .by { font-size: 20px; text-transform: none; }
-  .by strong {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 24px;
-    display: block;
+  code {
+    background: #e8f1f8;
+    color: #143b5d;
+    padding: 2px 6px;
+    border-radius: 4px;
   }
-
-  /* Two-column layout */
-  .cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    text-align: center;
-    margin-top: 60px;
+  a {
+    color: #1769aa;
   }
-  .cols .col {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 34px;
-    line-height: 1.25;
+  table {
+    font-size: 0.82em;
   }
-
-  /* Extension lists */
-  ul.ext { list-style: none; padding: 0; margin: 10px 0 0 0; }
-  ul.ext li { margin-bottom: 22px; font-size: 22px; line-height: 1.3; }
-  ul.ext li strong {
-    display: block;
-    font-size: 30px;
-    color: #e6d9dc;
-    margin-bottom: 2px;
+  th {
+    background: #e8f1f8;
   }
-
-  /* Bullet lists on dark slides */
-  section:not(.light) ul:not(.ext) {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 30px;
-    line-height: 1.35;
+  blockquote {
+    border-left: 5px solid #1769aa;
+    color: #35445a;
+    padding-left: 1em;
   }
-  .hl { color: #4a6fe3; }
-  section.light strong { color: #70020f; }
 ---
 
-<!-- _class: title -->
+<!-- _class: lead -->
 
-# Developer<br>Starter<br>Pack
+# Lab-Starter
 
-<div class="by">
+## Set Up Your Development Environment
 
-
-</div>
+**Git · Windows · Visual Studio Code**
 
 ---
 
-## 1. Code Editor / IDE
+# Plan
 
-<div class="cols">
-<div class="col">
-
-<!-- Add VS Code logo: ![w:200](vscode.png) -->
-Visual Studio Code<br>
-1 - Free<br>
-2 - Beginner-friendly
-
-</div>
-<div class="col">
-
-<!-- Add JetBrains logo: ![w:200](jetbrains.png) -->
-JetBrains IDEs<br>
-(PyCharm, IntelliJ, PhpStorm)
-
-</div>
-</div>
+1. The problems
+2. The solutions
+3. Step-by-step setup instructions
 
 ---
 
-## Best VS Code<br>Extensions
+# Common Setup Problems
 
-<ul class="ext">
-<li><strong>Live Server</strong>Launches a local development server with a live reload feature</li>
-<li><strong>Prettier</strong>A code formatter. It automatically cleans up, indents, and structures your code</li>
-<li><strong>GitLens</strong>Visualizes code authorship directly inside your files</li>
-<li><strong>Todo Tree</strong>Scans your workspace for comment tags like <b>TODO</b> or <b>FIXME</b> and organizes them into a clear tree view so you never forget unfinished tasks</li>
-<li><strong>Error Lens</strong>Radically changes how you see mistakes in your code by bringing errors directly to your line of sight rather than hiding them at the bottom of the screen</li>
-</ul>
-
----
-
-<ul class="ext">
-<li><strong>Auto Rename Tag</strong>It auto renames the other tag whether it is a closing or opening tag</li>
-<li><strong>Auto-Open Markdown Preview</strong>Automatically opens the preview of a Markdown file</li>
-<li><strong>Code Runner</strong>Lets you run multiple programming languages in the console by clicking a play button</li>
-<li><strong>GitHub Copilot</strong>An AI assistant integrated right in the IDE. It can solve problems or refactor and debug code</li>
-</ul>
+| Challenge                                  | Tool or setting                                                                                          |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Project changes are not tracked            | Git                                                                                                      |
+| Files such as `.gitignore` are not visible | Hidden items in File Explorer                                                                            |
+| A file’s full name is unclear              | File name extensions in File Explorer                                                                    |
+| Tasks are hard to find in the code         | [Better Todo Tree](https://marketplace.visualstudio.com/items?itemName=FanaticPythoner.better-todo-tree) |
+| HTML changes require manual refresh        | [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)                 |
 
 ---
 
-## Version<br>Control
+# Initialize a Git Repository
 
-- <span class="hl">Git</span>, the essential tool
-- <span class="hl">GitHub account</span> (also works as your portfolio). GitLab is an alternative.
-- <span class="hl">GitHub Desktop</span> or the GitLens extension if the command line feels heavy at first
+1. Open your project folder in VS Code.
+2. Open **Source Control** with `Ctrl + Shift + G`.
+3. Select **Initialize Repository**.
 
-<!-- Add logos: ![w:120](git.png) ![w:100](github.png) -->
+Or run this command in the project folder:
 
----
+```bash
+git init
+```
 
-<!-- _class: light -->
-
-## Browsers and<br>Dev Tools
-
-Chrome or Firefox with DevTools (Elements, Console, Network, Application tabs)
-Handy extensions: React DevTools (if you use React later), JSON Viewer, Lighthouse
+Git can now track changes in the project. You still need to create commits to save snapshots.
 
 ---
 
-<!-- _class: light -->
+# Show Hidden Files
 
-## Runtimes and<br>Languages
+Use this to find files such as `.gitignore` or `.env`:
 
-Install only what you need:
-Node.js (LTS), which includes npm
-Python 3
-PHP, if you're doing PHP work
-Java JDK, if you're going the Java or Android route
+1. Open File Explorer with `Win + E`.
+2. Select **View** → **Show**.
+3. Turn on **Hidden items**.
+
+Hidden files will now appear in the project folder.
 
 ---
 
-## Local Server and<br>Database
+# Show File Name Extensions
 
-- XAMPP or Laragon gives you Apache, PHP, and MySQL in one install (great for PHP/MySQL projects)
-- phpMyAdmin (comes with XAMPP) or DBeaver to manage databases
-- MySQL Workbench for visual schema design
-- SQLite for quick, lightweight projects
+File extensions help distinguish `README.md` from `README.md.txt`.
 
-<!-- Add logos: ![w:120](mysql.png) ![w:120](xampp.png) -->
+1. Open File Explorer with `Win + E`.
+2. Select **View** → **Show**.
+3. Turn on **File name extensions**.
+4. Check the full file name, for example, `README.md`.
+
+---
+
+# Find TODOs with Better Todo Tree
+
+Better Todo Tree searches code comments such as `TODO` and `FIXME` and displays them in a tree.
+
+1. Open **Extensions** with `Ctrl + Shift + X`.
+2. Search for [**Better Todo Tree**](https://marketplace.visualstudio.com/items?itemName=FanaticPythoner.better-todo-tree) by FanaticPythoner and install it.
+3. Add task comments where work remains:
+
+```js
+// TODO: add input validation
+// FIXME: correct this error
+```
+
+4. Open the Better Todo Tree view and select an item to jump to its line.
+
+---
+
+# Preview HTML with Live Server
+
+1. Open **Extensions** with `Ctrl + Shift + X`.
+2. Search for [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) by Ritwick Dey and install it.
+3. Open the project folder containing `index.html`.
+4. Select **Go Live** in the VS Code status bar.
+5. Save an edit and check the browser preview.
+
+> Live Server serves static files; it does not run PHP code.
